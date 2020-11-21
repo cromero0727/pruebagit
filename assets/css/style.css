@@ -23,13 +23,19 @@
     color: var(--color-primary);
 }
 
+.nombre-navbar {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-left: 50px;
+}
+
 #header-cr {
     height: 600px;
     background-image: url(/assets/img/img-cr.jpeg);
-    /* background-size: cover; */
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 45%
+    background-size: 45%;
 }
 
 .img-perfil {
@@ -65,19 +71,51 @@
     border-radius: 2px;
 }
 
-#quiensoy {
-    height: 30rem;
-    background-color: var(--color-neutro);
+.botones-cr:hover {
+    color: var(--color-light);
 }
 
-#mistrabajos {}
+#quiensoy {
+    height: auto;
+    background-color: var(--color-neutro);
+    background-attachment: fixed;
+}
+
+.card {
+    height: 350px;
+    transition: ease-in-out 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(141, 141, 141, 0.2), 0 6px 20px 0 rgba(141, 141, 141, 0.2);
+    border: none;
+}
+
+.card img {
+    height: 200px;
+}
+
+.card-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.paginador-carrusel {
+    top: 380px;
+}
+
+.carousel .paginador-carrusel .active {
+    background-color: var(--color-primary);
+}
+
+.carousel .paginador-carrusel li {
+    background-color: var(--color-tertiary);
+}
 
 #experiencia {
     padding-bottom: 50px;
     background-color: var(--color-neutro);
 }
-
-#contactame {}
 
 ul .lista-experiencia {
     list-style: none;
@@ -101,13 +139,12 @@ ul .lista-experiencia {
     font-size: 0.8rem;
 }
 
-
-/* 
 .caja-experiencia {
     border-radius: 4px;
     padding: 20px;
-    background-color: var(--color-primary);
-} */
+    background-color: var(--color-light);
+    box-shadow: 0 4px 8px 0 rgba(141, 141, 141, 0.2), 0 6px 20px 0 rgba(141, 141, 141, 0.2);
+}
 
 .antiguedad-laboral {
     font-size: 0.8rem;
@@ -138,15 +175,48 @@ ul .lista-footer a {
     color: var(--color-secundary);
 }
 
-.card {
-    height: 350px;
+
+/* MEDIAS QUERYS */
+
+@media (min-width: 340px) and (max-width: 767px) {
+    .carrusel-desktop {
+        display: none;
+    }
 }
 
-.card img {
-    height: 200px;
+@media (min-width: 767px) {
+    .carrusel-mobile {
+        display: none;
+    }
 }
 
-.card-text {
-    font-size: 0.8rem;
-    font-weight: 500;
+
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) {
+    #header-cr {
+        background-image: none;
+    }
+}
+
+
+/* MIN ES DESDE Y MAX ES HASTA  */
+
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (max-width: 768px) {
+    #header-cr {
+        background-image: none;
+    }
+    .card {
+        margin-top: 20px;
+    }
+    ul .lista-footer {
+        margin-left: 0;
+        margin-right: 40px;
+    }
+    footer ul {
+        margin-left: 0;
+    }
 }
