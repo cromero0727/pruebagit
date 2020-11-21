@@ -27,7 +27,7 @@
 }
 
 .main-cr {
-    background-image: url(/assets/img/img-cr.jpeg);
+    background-image: url(../img/img-cr.jpeg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: right;
